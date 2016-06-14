@@ -40,7 +40,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         singleton = this;
-        authConfig = new TwitterAuthConfig("UIDBjApAnN4rOvsuCoCU5q6ZP", "Vrc0YqLC76wOtJUEvFVlAKoBis3C0O7oODlg982nhJljXrJYCk");
+        authConfig = new TwitterAuthConfig(TwitterValues.CONSUMER_KEY, TwitterValues.CONSUMER_SECRET);
         Fabric.with(this, new Crashlytics(), new Twitter(authConfig));
         Crashlytics.setBool("Crash", areCrashesEnabled());
     }
